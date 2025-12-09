@@ -2,18 +2,25 @@ const state = { lang: 'cn' }
 const S2T = {
   '画': '畫',
   '社': '社',
+  '页': '頁',
+  '欢': '歡',
+  '这': '這',
+  '众': '眾',
+  '选': '選',
+  '择': '擇',
   '规': '規',
   '则': '則',
+  '质': '質',
+  '严': '嚴',
+  '击': '擊',
+  '类': '類',
   '员': '員',
-  '活': '活',
   '动': '動',
   '联': '聯',
   '系': '繫',
   '风': '風',
-  '格': '格',
   '业': '業',
   '务': '務',
-  '音': '音',
   '乐': '樂',
   '游': '遊',
   '戏': '戲',
@@ -23,48 +30,33 @@ const S2T = {
   '联': '聯',
   '绘': '繪',
   '简': '簡',
-  '介': '介',
-  '欢': '歡',
-  '迎': '迎',
   '暂': '暫',
   '无': '無',
   '关': '關',
   '问': '問',
   '题': '題',
-  '加': '加',
-  '入': '入',
-  '示': '示',
-  '例': '例',
   '图': '圖',
-  '廊': '廊',
   '价': '價',
   '补': '補',
-  '充': '充',
   '关': '關',
   '于': '於',
   '维': '維',
   '码': '碼',
   '国': '國',
   '语': '語',
-  '日': '日',
-  '方': '方',
-  '言': '言',
-  '星': '星',
   '盘': '盤',
   '灵': '靈',
   '摆': '擺',
   '纸': '紙',
-  '雕': '雕',
-  '羊': '羊',
-  '毛': '毛',
   '毡': '氈',
-  '剪': '剪',
   '辑': '輯',
   '问': '問',
   '鉴': '鑒',
   '观': '觀',
   '罗': '羅',
-  '扩': '擴'
+  '扩': '擴',
+  '梦': '夢',
+  '续': '續',
 }
 const originalTextMap = new Map(); // 新增：存储原始简体文本的Map
 function toTraditional(str) { return str.split('').map(c => S2T[c] || c).join('') }
@@ -119,7 +111,8 @@ const TAGS = {
     title: '绘画',
     groups: [
       { key: '风格', title: '风格', tags: ['平涂', '伪厚涂', '厚涂', '线稿', '草稿', '纸绘'] },
-      { key: '业务', title: '业务', tags: ['头像', '胸像', '半身', '立绘', 'Q版', "横插", "竖插", "模板"] }
+      { key: '类型', title: '类型', tags: ["模板", "双人", "多人", "梦图"] },
+      { key: '业务', title: '业务', tags: ['头像', '胸像', '半身', '立绘', 'Q版', "横插", "竖插"] }
     ]
   },
   '美工设计': {
@@ -177,82 +170,171 @@ const MEMBERS = [
   {
     id: '001',
     name: '咪噜喵',
-    role: '绘画/美工设计/拆分/Live2D建模师/3D建模师/游戏编程师',
+    role: '画师/美工设计师/拆分/Live2D建模师/3D建模师/游戏编程师',
     avatar: 'assets/avatars/avatar1.png',
     bio: '雨露均沾的工具人，网站的制作运营者',
     mainTags: ['绘画', '美工设计', '拆分', 'Live2D建模'],
 
-    services: [{
-      name: '对称QQ头',
-      price: '¥8r+',
-      note: '-工期：3-6天\u3000\u3000-复杂设：+2r-6r',
-      gallery: [{
-        type: 'image',
-        src: 'assets/gallery/001_artwork1_1.png'
-      }, {
-        type: 'image',
-        src: 'assets/gallery/001_artwork1_2.png'
-      }, {
-        type: 'image',
-        src: 'assets/gallery/001_artwork1_3.png'
-      }],
-      tags: ['平涂', 'Q版', '头像']
-    }, {
-      name: '正比大头',
-      price: '¥22r',
-      note: '-含简单背景\u3000\u3000-工期：3-6天\u3000\u3000-复杂设+4r-8r',
-      gallery: [{
-        type: 'image',
-        src: 'assets/gallery/001_artwork2_1.jpg'
-      }, {
-        type: 'image',
-        src: 'assets/gallery/001_artwork2_2.png'
-      }],
-      tags: ['平涂', '正比', '头像']
-    }, {
-      name: '动图拆分',
-      price: '¥30r-50r+',
-      note: '-粗拆：￥30r+\u3000\u3000-细拆：￥50r+\n-价格根据复杂度浮动',
-      gallery: [{
-        type: 'image',
-        src: 'assets/gallery/001_artwork3_1.png'
-      }],
-      tags: ['拆分']
-    }, {
-      name: 'Live2D动图建模',
-      price: '¥30r-50r+',
-      note: '-仅眨眼动图（包拆分）：￥20r+\n-头发飘动+￥8r\u3000\u3000-嘴巴变形+￥4r\n-整张图：￥40r+\n价格根据复杂度浮动\n-约包拆分，拆分费可打八折',
-      gallery: [{
-        type: 'video',
-        src: 'assets/gallery/001_artwork4_1.mp4'
-      }, {
-        type: 'video',
-        src: 'assets/gallery/001_artwork4_2.mp4'
-      }],
-      tags: ['Live2D建模', '仅眨眼动图', '全图动图']
-    }], 
-  }
+    services: [
+      {
+        name: '对称QQ头',
+        price: '¥8r+',
+        note: '-工期：3-6天\u3000\u3000-复杂设：+2r-6r',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/001_artwork1_1.png'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/001_artwork1_2.png'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/001_artwork1_3.png'
+          }
+        ],
+        tags: ['平涂', 'Q版', '头像']
+      },
+      {
+        name: '正比大头',
+        price: '¥22r',
+        note: '-含简单背景\u3000\u3000-工期：3-6天\u3000\u3000-复杂设+4r-8r',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/001_artwork2_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/001_artwork2_2.png'
+          }
+        ],
+        tags: ['平涂', '正比', '头像']
+      },
+      {
+        name: '动图拆分',
+        price: '¥30r-50r+',
+        note: '-粗拆：￥30r+\u3000\u3000-细拆：￥50r+\n-价格根据复杂度浮动',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/001_artwork3_1.png'
+          }
+        ],
+        tags: ['拆分']
+      },
+      {
+        name: 'Live2D动图建模',
+        price: '¥30r-50r+',
+        note: '-仅眨眼动图（包拆分）：￥20r+\n-头发飘动+￥8r\u3000\u3000-嘴巴变形+￥4r\n-整张图：￥40r+\n价格根据复杂度浮动\n-约包拆分，拆分费可打八折',
+        gallery: [
+          {
+            type: 'video',
+            src: 'assets/gallery/001_artwork4_1.mp4'
+          },
+          {
+            type: 'video',
+            src: 'assets/gallery/001_artwork4_2.mp4'
+          },
+          {
+            type: 'video',
+            src: 'assets/gallery/001_artwork4_3.mp4'
+          }
+        ],
+        tags: ['Live2D建模', '仅眨眼动图', '全图动图']
+      }
+    ],
+  },
+  {
+    id: '423',
+    name: '魈遥',
+    role: '画师',
+    avatar: 'assets/avatars/avatar423.jpg',
+    bio: '萌萌画手一只',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: '半身',
+        price: '¥10r',
+        note: '-工期：一周之内，没有排单出图较快\n-分两次出图',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/423_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/423_artwork1_2.jpg'
+          }
+        ],
+        tags: ['平涂', '正比', '半身']
+      },
+      {
+        name: '大头',
+        price: '¥5r+',
+        note: '-5r以上自带\n工期：一周之内，一次出图',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/423_artwork2_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/423_artwork2_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/423_artwork2_3.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/423_artwork2_4.jpg'
+          },
+        ],
+        tags: ['平涂', '正比', '头像']
+      },
+      {
+        name: '双人貼貼',
+        price: '¥15r',
+        note: '-接梦\n工期：1~2周 两次出图',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/423_artwork3_1.jpg'
+          }
+        ],
+        tags: ['平涂', '正比', '双人', '梦图']
+      }
+    ]
+  },
   // {
   //   id: '',
   //   name: '',
   //   role: '',
-  //   avatar: '',
+  //   avatar: 'assets/avatars/avatar.jpg',
   //   bio: '',
   //   mainTags: [''],
 
-  //   services: [{
-  //     name: '',
-  //     price: '',
-  //     note: '',
-  //     gallery: [{
-  //       type: '',
-  //       src: ''
-  //     }, {
-  //       type: '',
-  //       src: ''
-  //     }],
-  //     tags: ['']
-  //   }]
+  //   services: [
+  //     {
+  //       name: '',
+  //       price: '',
+  //       note: '',
+  //       gallery: [
+  //         {
+  //           type: '',
+  //           src: 'assets/gallery/'
+  //         },
+  //         {
+  //           type: '',
+  //           src: 'assets/gallery/'
+  //         }
+  //       ],
+  //       tags: ['']
+  //     }
+  //   ]
   // },
 
 ]
@@ -570,11 +652,11 @@ function openDetail(m) {
 
     function renderSlide() {
       stage.innerHTML = '';
-      const size = sv.gallery.length;
-      const pages = Math.max(1, Math.ceil(sv.gallery.length / size));
+      const pageSize = computePageSize();
+      const pages = Math.max(1, Math.ceil(sv.gallery.length / pageSize));
       if (page >= pages) page = pages - 1;
-      for (let i = 0; i < size; i++) {
-        const globalIndex = page * size + i;
+      for (let i = 0; i < pageSize; i++) {
+        const globalIndex = page * pageSize + i;
         const item = document.createElement('div');
         item.className = 'item';
         if (globalIndex < sv.gallery.length) {
@@ -600,8 +682,9 @@ function openDetail(m) {
     }
     function buildDots() {
       dots.innerHTML = '';
-      const size = sv.gallery.length;
-      const pages = Math.max(1, Math.ceil(sv.gallery.length / size));
+      const pageSize = computePageSize();
+      const pages = Math.max(1, Math.ceil(sv.gallery.length / pageSize));
+      if (pages === 0) return; // If no pages, don't render dots
       if (page >= pages) page = pages - 1;
       for (let i = 0; i < pages; i++) {
         const dot = document.createElement('button');
@@ -613,15 +696,15 @@ function openDetail(m) {
     }
 
     prev.addEventListener('click', () => {
-      const size = computePageSize();
-      const pages = Math.max(1, Math.ceil(sv.gallery.length / size));
+      const pageSize = computePageSize();
+      const pages = Math.max(1, Math.ceil(sv.gallery.length / pageSize));
       page = (page - 1 + pages) % pages;
       renderSlide();
       updateDots(page);
     });
     next.addEventListener('click', () => {
-      const size = computePageSize();
-      const pages = Math.max(1, Math.ceil(sv.gallery.length / size));
+      const pageSize = computePageSize();
+      const pages = Math.max(1, Math.ceil(sv.gallery.length / pageSize));
       page = (page + 1) % pages;
       renderSlide();
       updateDots(page);
@@ -637,8 +720,11 @@ function openDetail(m) {
     }
     window.addEventListener('resize', onResize);
 
-    renderSlide();
-    buildDots();
+    page = 0; // Reset page to 0 when opening a new service
+    requestAnimationFrame(() => {
+      renderSlide();
+      buildDots();
+    });
     if (sv.tags && sv.tags.length > 0) {
       const tagsContainer = document.createElement('div');
       tagsContainer.className = 'service-tags';
