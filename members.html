@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>白萁画社 · 社员</title>
+  <link rel="icon" href="assets/favicon.png" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="members">
+  <div id="sakura-container"></div>
+  <header class="navbar">
+    <a class="logo" href="index.html"><img src="assets/favicon.png" alt="logo"> 白萁画社</a>
+    <button class="hamburger" aria-label="菜单">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="rules.html">规则</a>
+      <a href="members.html" class="active">社员</a>
+      <a href="activities.html">活动</a>
+      <a href="contact.html">联系</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="lang-toggle" class="pill">简/繁</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1 class="page-title">社员列表</h1>
+      <h3 class="page-subtitle">标签筛选系统可多选标签，方便老师们更快速精准找到想约的社员哦！</h3>
+      <div class="filter-bar">
+        <input id="search-input" type="text" placeholder="输入关键字…">
+        <button id="toggle-filter" class="btn glow">筛选标签~</button>
+      </div>
+      <div id="selected-tags" class="selected-tags"></div>
+      <div id="filter-panel" class="filter-panel hidden">
+        <div class="main-tags" id="main-tags"></div>
+        <div class="sub-tags" id="sub-tags"></div>
+      </div>
+
+      <div id="members-grid" class="grid"></div>
+      <div id="no-results" class="no-results hidden">目前没有符合条件的社员哦~</div>
+
+      <div class="pagination-controls">
+        <select id="page-select" class="pill"></select>
+        <button id="prev-page" class="pill">‹</button>
+        <span id="page-info">1 / 1</span>
+        <button id="next-page" class="pill">›</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="member-detail" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close btn outline" id="back-to-list">返回社员列表</button>
+      <div class="detail-header">
+        <img id="detail-avatar" class="detail-avatar" alt="avatar">
+        <div class="detail-info">
+          <h2 id="detail-name"></h2>
+          <div id="detail-id" class="badge"></div>
+          <div id="detail-role" class="role"></div>
+          <p id="detail-bio" class="bio"></p>
+        </div>
+      </div>
+      <div id="services" class="services"></div>
+    </div>
+    <div id="lightbox" class="lightbox hidden">
+      <button id="lightbox-close" class="btn outline">关闭</button>
+      <div class="lightbox-stage">
+        <button id="gallery-prev" class="gallery-arrow">‹</button>
+        <div id="lightbox-content"></div>
+        <button id="gallery-next" class="gallery-arrow">›</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div>© 2025 白萁画社 · 网站由咪噜喵MiruCat制作</div>
+  </footer>
+</body>
+</html>
+
