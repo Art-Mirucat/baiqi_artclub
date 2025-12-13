@@ -140,6 +140,12 @@ const TAGS = {
       { key: '业务', title: '业务', tags: ['全图动图', '仅眨眼动图', '虚拟皮套'] }
     ]
   },
+  '作曲': {
+    title: '作曲',
+    groups: [
+    //   { key: '类型', title: '类型', tags: ['古典', '爵士', '电子', '流行'] }
+    ]
+  }
   // '占卜': {
   //   title: '占卜',
   //   groups: [
@@ -368,6 +374,143 @@ const MEMBERS = [
           },
         ],
         tags: ['平涂', 'Q版', '头像']
+      }
+    ]
+  },
+  {
+    id: '029',
+    name: '猫猫',
+    role: '画师',
+    avatar: 'assets/avatars/avatar29.jpg',
+    bio: '业务：双人半身、头像、立绘',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: '双人半身',
+        price: '￥65r',
+        note: '-不接光头鞋拔子霸总兽设老人\n-其他可接，可接真人转漫\n-工期：排到后7天内',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/029_artwork1_1.jpg'
+          }
+        ],
+        tags: ['平涂', '双人', '半身']
+      },
+      {
+        name: '头像',
+        price: '￥25r',
+        note: '-不接光头鞋拔子霸总兽设老人\n-其他可接，可接真人转漫\n-工期：排到后5天内',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/029_artwork2_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/029_artwork2_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/029_artwork2_3.jpg'
+          }
+        ],
+        tags: ['平涂', '头像']
+      },
+      {
+        name: '立绘',
+        price: '￥55r',
+        note: '-不接光头鞋拔子霸总兽设老人\n-其他可接，可接真人转漫\n-工期：排到后7天内',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/029_artwork3_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/029_artwork3_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/029_artwork3_3.jpg'
+          }
+        ],
+        tags: ['平涂', '立绘']
+      }
+    ]
+  },
+  {
+    id: '032',
+    name: '符号',
+    role: '画师',
+    avatar: 'assets/avatars/avatar32.jpg',
+    bio: '业务：QQ人组合页、组合页半身插',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: 'QQ人组合页',
+        price: '￥20r',
+        note: '',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/032_artwork1_1.jpg'
+          }
+        ],
+        tags: ['平涂', 'Q版', '组合页']
+      },
+      {
+        name: '半身插组合页',
+        price: '￥25r',
+        note: '',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/032_artwork2_1.jpg'
+          }
+        ],
+        tags: ['平涂', '半身插', '组合页']
+      }
+    ]
+  },
+  {
+    id: '033',
+    name: '刘存',
+    role: '画师/曲师',
+    avatar: 'assets/avatars/avatar33.jpg',
+    bio: '业务：绘画、作曲',
+    mainTags: ['绘画', '作曲'],
+
+    services: [
+      {
+        name: '单人绘画',
+        price: '￥8r+',
+        note: '多人单价+￥3r\u3000板绘纸绘皆可，有几率赠无偿',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/033_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/033_artwork1_2.jpg'
+          }
+        ],
+        tags: ['平涂']
+      },
+      {
+        name: '印象曲',
+        price: '￥自带价',
+        note: '印象曲内容仅限 词/曲编/调/混/绘/PV',
+        gallery: [
+          {
+            type: 'video',
+            src: 'assets/gallery/033_artwork2_1.mp4'
+          }
+        ],
+        tags: ['作曲']
       }
     ]
   },
