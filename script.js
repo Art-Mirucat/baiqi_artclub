@@ -111,8 +111,8 @@ const TAGS = {
     title: '绘画',
     groups: [
       { key: '风格', title: '风格', tags: ['平涂', '伪厚涂', '厚涂', '线稿', '草稿', '纸绘'] },
-      { key: '类型', title: '类型', tags: ["模板", "双人", "多人", "梦图"] },
-      { key: '业务', title: '业务', tags: ['头像', '胸像', '半身', '立绘', 'Q版', "横插", "竖插"] }
+      { key: '类型', title: '类型', tags: ["正比", "Q版", "模板", "双人", "多人", "梦图"] },
+      { key: '业务', title: '业务', tags: ['头像', '胸像', '半身', '立绘', "横插", "竖插", "场景插"] }
     ]
   },
   '美工设计': {
@@ -247,11 +247,136 @@ const MEMBERS = [
     ],
   },
   {
+    id: '009',
+    name: '晴璺',
+    role: '画师',
+    avatar: 'assets/avatars/avatar9.png',
+    bio: '业务：大头、半身',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: '大头',
+        price: '¥12r+',
+        note: '',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/009_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/009_artwork1_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/009_artwork1_3.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/009_artwork1_4.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/009_artwork1_5.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/009_artwork1_6.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/009_artwork1_7.jpg'
+          },
+        ],
+        tags: ['平涂', '正比', '头像']
+      },
+      {
+        name: '半身',
+        price: '¥16r+',
+        note: '',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/009_artwork2_1.jpg'
+          }
+        ],
+        tags: ['平涂', '正比', '半身']
+      }
+    ]
+  },
+  {
+    id: '012',
+    name: '红豆',
+    role: '画师',
+    avatar: 'assets/avatars/avatar12.jpg',
+    bio: '业务：带背景QQ人',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: '带背景QQ人',
+        price: '￥5r',
+        note: '',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/012_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/012_artwork1_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/012_artwork1_3.jpg'
+          }
+        ],
+        tags: ['平涂', 'Q版', '场景插']
+      }
+    ]
+  },
+  {
+    id: '020',
+    name: '法律系',
+    role: '画师',
+    avatar: 'assets/avatars/avatar20.jpg',
+    bio: '业务：QQ头',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: 'QQ头',
+        price: '￥2r',
+        note: '-工期：周六周天画\u3000-出线稿付全款',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/020_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/020_artwork1_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/020_artwork1_3.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/020_artwork1_4.jpg'
+          },
+        ],
+        tags: ['平涂', 'Q版', '头像']
+      }
+    ]
+  },
+  {
     id: '423',
     name: '魈遥',
     role: '画师',
     avatar: 'assets/avatars/avatar423.jpg',
-    bio: '萌萌画手一只',
+    bio: '业务：大头、半身',
     mainTags: ['绘画'],
 
     services: [
