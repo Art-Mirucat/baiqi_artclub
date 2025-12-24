@@ -515,6 +515,45 @@ const MEMBERS = [
     ]
   },
   {
+    id: '037',
+    name: '兔子',
+    role: '画师',
+    avatar: 'assets/avatars/avatar37.jpg',
+    bio: '业务：绘画',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: '大头',
+        price: '￥60r',
+        note: '-只有星期五晚上和星期六可画稿假期也可画稿,其余时间不定\n-双人x2\u3000\u3000-加急+￥7r',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/037_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/037_artwork1_2.jpg'
+          }
+        ],
+        tags: ['绘画', '伪厚涂', '正比', '头像']
+      },
+      {
+        name: 'QQ人立绘',
+        price: '￥50r',
+        note: '-只有星期五晚上和星期六可画稿假期也可画稿,其余时间不定\n-双人x2\u3000\u3000-加急+￥7r',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/037_artwork2_1.jpg'
+          }
+        ],
+        tags: ['绘画', '伪厚涂', 'Q版', '立绘']
+      }
+    ]
+  },
+  {
     id: '423',
     name: '魈遥',
     role: '画师',
@@ -577,6 +616,7 @@ const MEMBERS = [
       }
     ]
   },
+  
   // {
   //   id: '',
   //   name: '',
