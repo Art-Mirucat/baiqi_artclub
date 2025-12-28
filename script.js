@@ -21,12 +21,18 @@ const S2T = {
   '风': '風',
   '业': '業',
   '务': '務',
+  '标': '標',
+  '签': '簽',
+  '筛': '篩',
+  '约': '約',
   '乐': '樂',
   '游': '遊',
   '戏': '戲',
   '写': '寫',
   '动': '動',
   '画': '畫',
+  '网': '網',
+  '运': '運',
   '联': '聯',
   '绘': '繪',
   '简': '簡',
@@ -143,7 +149,7 @@ const TAGS = {
   '作曲': {
     title: '作曲',
     groups: [
-    //   { key: '类型', title: '类型', tags: ['古典', '爵士', '电子', '流行'] }
+      //   { key: '类型', title: '类型', tags: ['古典', '爵士', '电子', '流行'] }
     ]
   }
   // '占卜': {
@@ -185,7 +191,7 @@ const MEMBERS = [
       {
         name: '对称QQ头',
         price: '¥8r+',
-        note: '-工期：3-6天\u3000\u3000-复杂设：+2r-6r',
+        note: '-工期：3-6天\u3000-复杂设：+2r-6r',
         gallery: [
           {
             type: 'image',
@@ -205,7 +211,7 @@ const MEMBERS = [
       {
         name: '正比大头',
         price: '¥22r',
-        note: '-含简单背景\u3000\u3000-工期：3-6天\u3000\u3000-复杂设+4r-8r',
+        note: '-含简单背景\u3000-工期：3-6天\u3000-复杂设+4r-8r',
         gallery: [
           {
             type: 'image',
@@ -221,7 +227,7 @@ const MEMBERS = [
       {
         name: '动图拆分',
         price: '¥30r-50r+',
-        note: '-粗拆：￥30r+\u3000\u3000-细拆：￥50r+\n-价格根据复杂度浮动',
+        note: '-粗拆：￥30r+\u3000-细拆：￥50r+\n-价格根据复杂度浮动',
         gallery: [
           {
             type: 'image',
@@ -233,7 +239,7 @@ const MEMBERS = [
       {
         name: 'Live2D动图建模',
         price: '¥30r-50r+',
-        note: '-仅眨眼动图（包拆分）：￥20r+\n-头发飘动+￥8r\u3000\u3000-嘴巴变形+￥4r\n-整张图：￥40r+\n价格根据复杂度浮动\n-约包拆分，拆分费可打八折',
+        note: '-仅眨眼动图（包拆分）：￥20r+\n-头发飘动+￥8r\u3000-嘴巴变形+￥4r\n-整张图：￥40r+\n价格根据复杂度浮动\n-约包拆分，拆分费可打八折',
         gallery: [
           {
             type: 'video',
@@ -343,6 +349,37 @@ const MEMBERS = [
     ]
   },
   {
+    id: '016',
+    name: '若柒',
+    role: '画师',
+    avatar: 'assets/avatars/avatar16.jpg',
+    bio: '业务：QQ头',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: '柒师傅美味胸像',
+        price: '￥10r-￥15r',
+        note: '-无模版\u3000-PSD+3r\u3000-排版+5r\u3000-代打水印+1r\n文字设✖1.5\u3000ppl✖1.5\u3000文字or商用✖2 \n不接成女/男生\n图到手可以选择公开 但得让我知道',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/016_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/016_artwork1_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/016_artwork1_3.jpg'
+          },
+        ],
+        tags: ['平涂', 'Q版', '场景插']
+      }
+    ]
+  },
+  {
     id: '020',
     name: '法律系',
     role: '画师',
@@ -374,6 +411,41 @@ const MEMBERS = [
           },
         ],
         tags: ['平涂', 'Q版', '头像']
+      }
+    ]
+  },
+  {
+    id: '021',
+    name: 'Chimelin',
+    role: '画师',
+    avatar: 'assets/avatars/avatar21.jpg',
+    bio: '业务：QQ人草头',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: 'QQ人草头',
+        price: '￥23r',
+        note: '',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/021_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/021_artwork1_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/021_artwork1_3.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/021_artwork1_4.jpg'
+          },
+        ],
+        tags: ['草稿', 'Q版', '头像']
       }
     ]
   },
@@ -519,14 +591,14 @@ const MEMBERS = [
     name: '兔子',
     role: '画师',
     avatar: 'assets/avatars/avatar37.jpg',
-    bio: '业务：绘画',
+    bio: '业务：正比头像、QQ人立绘',
     mainTags: ['绘画'],
 
     services: [
       {
         name: '大头',
         price: '￥60r',
-        note: '-只有星期五晚上和星期六可画稿假期也可画稿,其余时间不定\n-双人x2\u3000\u3000-加急+￥7r',
+        note: '-只有星期五晚上和星期六可画稿假期也可画稿,其余时间不定\n-双人x2\u3000-加急+￥7r',
         gallery: [
           {
             type: 'image',
@@ -542,7 +614,7 @@ const MEMBERS = [
       {
         name: 'QQ人立绘',
         price: '￥50r',
-        note: '-只有星期五晚上和星期六可画稿假期也可画稿,其余时间不定\n-双人x2\u3000\u3000-加急+￥7r',
+        note: '-只有星期五晚上和星期六可画稿假期也可画稿,其余时间不定\n-双人x2\u3000-加急+￥7r',
         gallery: [
           {
             type: 'image',
@@ -550,6 +622,96 @@ const MEMBERS = [
           }
         ],
         tags: ['绘画', '伪厚涂', 'Q版', '立绘']
+      }
+    ]
+  },
+  {
+    id: '043',
+    name: '林枭',
+    role: '画师',
+    avatar: 'assets/avatars/avatar43.jpg',
+    bio: '业务：QQ人组合页、组合页半身插',
+    mainTags: ['绘画'],
+
+    services: [
+      {
+        name: 'QQ大头',
+        price: '￥5r-￥15r',
+        note: '-工期：5天内完成\u3000-抱娃+1r\u3000-双人x2',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/043_artwork1_1.jpg'
+          },
+        ],
+        tags: ['平涂', 'Q版', '头像'],
+      },
+      {
+        name: 'QQ半身',
+        price: '￥5r-￥15r',
+        note: '-工期：5天内完成\u3000-抱娃+1r\u3000-双人x2',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/043_artwork2_1.jpg'
+          }
+        ],
+        tags: ['平涂', 'Q版', '半身']
+      },
+      {
+        name: 'QQ人小鼻嘎',
+        price: '￥5r-￥15r',
+        note: '-工期：5天内完成\u3000-抱娃+1r\u3000-双人x2',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/043_artwork3_1.jpg'
+          }
+        ],
+        tags: ['平涂', 'Q版', '立绘']
+      },
+      {
+        name: '底色半身',
+        price: '￥5r-￥15r',
+        note: '-工期：5天内完成\u3000-抱娃+1r\u3000-双人x2',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/043_artwork4_1.jpg'
+          }
+        ],
+        tags: ['平涂', '正比', '半身']
+      }
+    ]
+  },
+  {
+    id: '048',
+    name: '燼夢',
+    role: '文手',
+    avatar: 'assets/avatars/avatar48.jpg',
+    bio: '业务：与文相关的一切',
+    mainTags: ['写文'],
+
+    services: [
+      {
+        name: '与文相关的都接',
+        price: '¥自带价',
+        note: '-不接柜子，辱华',
+        gallery: [
+          {
+            type: 'image',
+            src: 'assets/gallery/048_artwork1_1.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/048_artwork1_2.jpg'
+          },
+          {
+            type: 'image',
+            src: 'assets/gallery/048_artwork1_3.jpg'
+          }
+        ],
+        tags: ['写文']
       }
     ]
   },
@@ -616,7 +778,7 @@ const MEMBERS = [
       }
     ]
   },
-  
+
   // {
   //   id: '',
   //   name: '',
